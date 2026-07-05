@@ -1,9 +1,6 @@
-
-
-Reading notebook v2 1 · HTML
 <!DOCTYPE html>
 <html lang="ko">
- 
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +9,7 @@ Reading notebook v2 1 · HTML
     href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzRhMzUyMCIvPjx0ZXh0IHg9IjE2IiB5PSIyMyIgZm9udC1zaXplPSIyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNlcmlmIj7wn5OWPC90ZXh0Pjwvc3ZnPg==">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Caveat:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@300;400;600;700&display=swap');
- 
+
     :root {
       --bg: #f7f4ef;
       --surface: #fffdf9;
@@ -32,20 +29,20 @@ Reading notebook v2 1 · HTML
       --shadow: 0 4px 24px rgba(90, 60, 20, 0.10);
       --shadow2: 0 2px 8px rgba(90, 60, 20, 0.08);
     }
- 
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
- 
+
     body {
       font-family: 'Nanum Pen Script', cursive;
       background: var(--bg);
       color: var(--ink);
       min-height: 100vh;
     }
- 
+
     /* Header */
     .header {
       background: var(--accent3);
@@ -58,14 +55,14 @@ Reading notebook v2 1 · HTML
       z-index: 100;
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
     }
- 
+
     .header-title {
       font-family: 'Nanum Pen Script', cursive;
       font-size: 28px;
       color: var(--accent2);
       letter-spacing: 2px;
     }
- 
+
     .header-sub {
       font-family: 'Caveat', cursive;
       font-size: 13px;
@@ -73,12 +70,12 @@ Reading notebook v2 1 · HTML
       margin-top: 2px;
       letter-spacing: 3px;
     }
- 
+
     .header-actions {
       display: flex;
       gap: 10px;
     }
- 
+
     .btn {
       padding: 8px 18px;
       border-radius: 4px;
@@ -90,49 +87,49 @@ Reading notebook v2 1 · HTML
       transition: all 0.15s;
       letter-spacing: 0.5px;
     }
- 
+
     .btn-primary {
       background: var(--accent);
       color: #fff4e0;
       border-color: var(--accent);
     }
- 
+
     .btn-primary:hover {
       background: var(--accent2);
       color: var(--accent3);
     }
- 
+
     .btn-ghost {
       background: transparent;
       color: var(--accent2);
     }
- 
+
     .btn-ghost:hover {
       background: rgba(200, 169, 110, 0.15);
     }
- 
+
     .btn-sm {
       padding: 5px 12px;
       font-size: 16px;
     }
- 
+
     .btn-danger {
       background: var(--red);
       color: #fff;
       border-color: var(--red);
     }
- 
+
     .btn-danger:hover {
       opacity: 0.85;
     }
- 
+
     /* Layout */
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 32px 24px;
     }
- 
+
     /* Stats bar */
     .stats-band {
       display: flex;
@@ -141,7 +138,7 @@ Reading notebook v2 1 · HTML
       background: var(--bg);
       flex-wrap: wrap;
     }
- 
+
     .stat-card {
       background: var(--surface);
       border: 1px solid var(--border2);
@@ -157,12 +154,12 @@ Reading notebook v2 1 · HTML
       justify-content: center;
       transition: box-shadow 0.15s, transform 0.15s;
     }
- 
+
     .stat-card:hover {
       box-shadow: var(--shadow);
       transform: translateY(-2px);
     }
- 
+
     .stat-num {
       font-size: 30px;
       font-weight: 700;
@@ -170,7 +167,7 @@ Reading notebook v2 1 · HTML
       font-family: 'Caveat', cursive;
       line-height: 1;
     }
- 
+
     .stat-label {
       font-size: 11px;
       color: var(--ink3);
@@ -178,7 +175,7 @@ Reading notebook v2 1 · HTML
       letter-spacing: 0.5px;
       font-family: 'Nanum Pen Script', cursive;
     }
- 
+
     /* Filter section */
     .filter-section {
       background: var(--bg);
@@ -186,7 +183,7 @@ Reading notebook v2 1 · HTML
       border-bottom: 2px solid var(--border2);
       margin-bottom: 0;
     }
- 
+
     .filter-section-label {
       font-size: 14px;
       color: var(--ink3);
@@ -194,7 +191,7 @@ Reading notebook v2 1 · HTML
       font-family: 'Nanum Pen Script', cursive;
       margin-bottom: 10px;
     }
- 
+
     /* Filter bar */
     .filter-bar {
       display: grid;
@@ -203,7 +200,7 @@ Reading notebook v2 1 · HTML
       margin-bottom: 0;
       align-items: center;
     }
- 
+
     .filter-bar select,
     .filter-bar input {
       padding: 9px 12px;
@@ -217,18 +214,18 @@ Reading notebook v2 1 · HTML
       width: 100%;
       height: 40px;
     }
- 
+
     .filter-bar select:focus,
     .filter-bar input:focus {
       border-color: var(--accent2);
     }
- 
+
     /* 커스텀 드롭다운 */
     .custom-select-wrap {
       position: relative;
       width: 100%;
     }
- 
+
     .custom-select-wrap::after {
       content: '▾';
       position: absolute;
@@ -239,7 +236,7 @@ Reading notebook v2 1 · HTML
       color: var(--ink3);
       pointer-events: none;
     }
- 
+
     .custom-select-btn {
       width: 100%;
       height: 40px;
@@ -258,12 +255,12 @@ Reading notebook v2 1 · HTML
       text-overflow: ellipsis;
       transition: border-color 0.15s;
     }
- 
+
     .custom-select-btn:focus,
     .custom-select-btn.open {
       border-color: var(--accent2);
     }
- 
+
     .custom-select-dropdown {
       display: none;
       position: absolute;
@@ -277,11 +274,11 @@ Reading notebook v2 1 · HTML
       z-index: 300;
       overflow: hidden;
     }
- 
+
     .custom-select-dropdown.open {
       display: block;
     }
- 
+
     .custom-select-option {
       padding: 9px 14px;
       font-size: 15px;
@@ -291,53 +288,53 @@ Reading notebook v2 1 · HTML
       transition: background 0.1s;
       border-bottom: 1px solid var(--border2);
     }
- 
+
     .custom-select-option:last-child {
       border-bottom: none;
     }
- 
+
     .custom-select-option:hover {
       background: var(--surface2);
     }
- 
+
     .custom-select-option.selected {
       color: var(--accent);
       background: var(--tag-bg);
     }
- 
+
     @media (max-width: 700px) {
       .stats-band {
         padding: 0 16px;
       }
- 
+
       .stat-num {
         font-size: 22px;
       }
- 
+
       .stat-label {
         font-size: 9px;
       }
- 
+
       .filter-section {
         padding: 14px 16px;
       }
- 
+
       .filter-bar {
         grid-template-columns: 1fr 1fr;
       }
- 
+
       .filter-bar input {
         grid-column: 1 / -1;
       }
     }
- 
+
     /* Book grid */
     .book-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
       gap: 24px;
     }
- 
+
     /* Book card */
     .book-card {
       background: var(--surface);
@@ -350,12 +347,12 @@ Reading notebook v2 1 · HTML
       display: flex;
       flex-direction: column;
     }
- 
+
     .book-card:hover {
       transform: translateY(-3px);
       box-shadow: var(--shadow);
     }
- 
+
     .book-cover {
       width: 100%;
       height: 200px;
@@ -366,7 +363,7 @@ Reading notebook v2 1 · HTML
       position: relative;
       overflow: hidden;
     }
- 
+
     .book-cover img {
       width: 100%;
       height: 100%;
@@ -375,7 +372,7 @@ Reading notebook v2 1 · HTML
       display: block;
       background: var(--surface2);
     }
- 
+
     .book-cover-placeholder {
       width: 100%;
       height: 200px;
@@ -386,17 +383,17 @@ Reading notebook v2 1 · HTML
       justify-content: center;
       gap: 8px;
     }
- 
+
     .book-cover-placeholder-icon {
       font-size: 36px;
       opacity: 0.4;
     }
- 
+
     .book-cover-placeholder-text {
       font-size: 11px;
       color: var(--ink3);
     }
- 
+
     .book-info {
       padding: 16px;
       flex: 1;
@@ -404,26 +401,26 @@ Reading notebook v2 1 · HTML
       flex-direction: column;
       gap: 6px;
     }
- 
+
     .book-title {
       font-family: 'Nanum Pen Script', cursive;
       font-size: 17px;
       color: var(--ink);
       line-height: 1.4;
     }
- 
+
     .book-author {
       font-size: 12px;
       color: var(--ink3);
     }
- 
+
     .book-meta {
       display: flex;
       gap: 6px;
       flex-wrap: wrap;
       margin-top: 4px;
     }
- 
+
     .tag {
       padding: 2px 8px;
       border-radius: 3px;
@@ -433,37 +430,37 @@ Reading notebook v2 1 · HTML
       font-weight: 500;
       letter-spacing: 0.3px;
     }
- 
+
     .tag-ebook {
       background: #e8f0fb;
       color: #2c5282;
     }
- 
+
     .tag-paper {
       background: #f0f5e8;
       color: #2d5a1b;
     }
- 
+
     .book-stars {
       display: flex;
       gap: 2px;
     }
- 
+
     .star {
       font-size: 14px;
       color: var(--star-empty);
     }
- 
+
     .star.filled {
       color: var(--star);
     }
- 
+
     .book-dates {
       font-size: 11px;
       color: var(--ink3);
       margin-top: 4px;
     }
- 
+
     .book-card-actions {
       padding: 10px 16px;
       border-top: 1px solid var(--border2);
@@ -471,7 +468,7 @@ Reading notebook v2 1 · HTML
       gap: 8px;
       justify-content: flex-end;
     }
- 
+
     /* Empty state */
     .empty-state {
       grid-column: 1/-1;
@@ -479,23 +476,23 @@ Reading notebook v2 1 · HTML
       padding: 64px 32px;
       color: var(--ink3);
     }
- 
+
     .empty-icon {
       font-size: 48px;
       margin-bottom: 16px;
       opacity: 0.4;
     }
- 
+
     .empty-text {
       font-size: 16px;
       font-family: 'Noto Serif KR', serif;
     }
- 
+
     .empty-sub {
       font-size: 13px;
       margin-top: 8px;
     }
- 
+
     /* Modal */
     .modal-overlay {
       display: none;
@@ -508,11 +505,11 @@ Reading notebook v2 1 · HTML
       padding: 24px 16px;
       overflow-y: auto;
     }
- 
+
     .modal-overlay.open {
       display: flex;
     }
- 
+
     .modal {
       background: var(--surface);
       border-radius: 12px;
@@ -522,7 +519,7 @@ Reading notebook v2 1 · HTML
       margin: auto;
       overflow: hidden;
     }
- 
+
     .modal-header {
       background: var(--accent3);
       padding: 20px 28px;
@@ -530,13 +527,13 @@ Reading notebook v2 1 · HTML
       align-items: center;
       justify-content: space-between;
     }
- 
+
     .modal-title {
       font-family: 'Nanum Pen Script', cursive;
       font-size: 22px;
       color: var(--accent2);
     }
- 
+
     .modal-close {
       background: none;
       border: none;
@@ -546,15 +543,15 @@ Reading notebook v2 1 · HTML
       line-height: 1;
       padding: 0;
     }
- 
+
     .modal-close:hover {
       color: #fff;
     }
- 
+
     .modal-body {
       padding: 28px;
     }
- 
+
     .modal-footer {
       padding: 16px 28px;
       border-top: 1px solid var(--border2);
@@ -562,7 +559,7 @@ Reading notebook v2 1 · HTML
       justify-content: flex-end;
       gap: 10px;
     }
- 
+
     /* Form */
     .form-row {
       display: grid;
@@ -570,29 +567,29 @@ Reading notebook v2 1 · HTML
       gap: 16px;
       margin-bottom: 18px;
     }
- 
+
     .form-row.full {
       grid-template-columns: 1fr;
     }
- 
+
     .form-group {
       display: flex;
       flex-direction: column;
       gap: 6px;
     }
- 
+
     .form-label {
       font-size: 16px;
       font-family: 'Nanum Pen Script', cursive;
       color: var(--ink2);
       letter-spacing: 0.5px;
     }
- 
+
     .form-label .req {
       color: var(--red);
       margin-left: 2px;
     }
- 
+
     .form-input,
     .form-select,
     .form-textarea {
@@ -606,30 +603,30 @@ Reading notebook v2 1 · HTML
       outline: none;
       transition: border-color 0.15s;
     }
- 
+
     .form-input:focus,
     .form-select:focus,
     .form-textarea:focus {
       border-color: var(--accent2);
       background: var(--surface);
     }
- 
+
     .form-textarea {
       resize: vertical;
       min-height: 100px;
       line-height: 1.7;
     }
- 
+
     .form-textarea.tall {
       min-height: 140px;
     }
- 
+
     /* Star rating input */
     .star-input {
       display: flex;
       gap: 6px;
     }
- 
+
     .star-input .star-btn {
       font-size: 22px;
       color: var(--star-empty);
@@ -639,15 +636,15 @@ Reading notebook v2 1 · HTML
       padding: 0;
       transition: color 0.1s, transform 0.1s;
     }
- 
+
     .star-input .star-btn:hover {
       transform: scale(1.2);
     }
- 
+
     .star-input .star-btn.active {
       color: var(--star);
     }
- 
+
     /* Cover upload */
     .cover-upload-area {
       border: 2px dashed var(--border);
@@ -658,19 +655,19 @@ Reading notebook v2 1 · HTML
       transition: border-color 0.15s, background 0.15s;
       position: relative;
     }
- 
+
     .cover-upload-area:hover {
       border-color: var(--accent2);
       background: var(--surface2);
     }
- 
+
     .cover-upload-area input[type=file] {
       position: absolute;
       inset: 0;
       opacity: 0;
       cursor: pointer;
     }
- 
+
     .cover-preview {
       max-height: 160px;
       max-width: 120px;
@@ -679,13 +676,13 @@ Reading notebook v2 1 · HTML
       display: block;
       border-radius: 4px;
     }
- 
+
     .cover-upload-hint {
       font-size: 12px;
       color: var(--ink3);
       margin-top: 8px;
     }
- 
+
     /* Excerpt section */
     .excerpt-section {
       border: 1px solid var(--border2);
@@ -694,21 +691,21 @@ Reading notebook v2 1 · HTML
       margin-bottom: 18px;
       background: var(--bg);
     }
- 
+
     .excerpt-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 12px;
     }
- 
+
     .excerpt-title {
       font-size: 12px;
       font-weight: 500;
       color: var(--ink2);
       letter-spacing: 0.5px;
     }
- 
+
     .excerpt-item {
       background: var(--surface);
       border: 1px solid var(--border2);
@@ -723,13 +720,13 @@ Reading notebook v2 1 · HTML
       gap: 4px;
       margin-top: 8px;
     }
- 
+
     .excerpt-date {
       font-size: 10px;
       color: var(--ink3);
       margin-bottom: 6px;
     }
- 
+
     .excerpt-text {
       font-family: 'Nanum Pen Script', cursive;
       font-size: 17px;
@@ -737,7 +734,7 @@ Reading notebook v2 1 · HTML
       color: var(--ink);
       white-space: pre-wrap;
     }
- 
+
     .excerpt-delete {
       background: none;
       border: none;
@@ -749,12 +746,12 @@ Reading notebook v2 1 · HTML
       border-radius: 3px;
       flex-shrink: 0;
     }
- 
+
     .excerpt-delete:hover {
       color: var(--red);
     }
- 
- 
+
+
     .excerpt-edit-area {
       width: 100%;
       font-family: 'Nanum Pen Script', cursive;
@@ -774,20 +771,20 @@ Reading notebook v2 1 · HTML
     .excerpt-save-btn:hover { background: var(--accent2); color: var(--accent3); }
     .excerpt-cancel-btn { padding: 3px 10px; border-radius: 4px; background: none; color: var(--ink3); border: 1px solid var(--border); cursor: pointer; font-family: 'Nanum Pen Script', cursive; font-size: 14px; }
     .excerpt-cancel-btn:hover { background: var(--surface2); }
- 
+
     .excerpt-add-form {
       display: flex;
       flex-direction: column;
       gap: 8px;
       margin-top: 10px;
     }
- 
+
     .excerpt-add-form .row {
       display: flex;
       gap: 8px;
       align-items: flex-end;
     }
- 
+
     /* Detail modal */
     .detail-cover {
       width: 100%;
@@ -797,7 +794,7 @@ Reading notebook v2 1 · HTML
       display: block;
       background: var(--surface2);
     }
- 
+
     .detail-cover-placeholder {
       width: 100%;
       height: 240px;
@@ -808,11 +805,11 @@ Reading notebook v2 1 · HTML
       font-size: 48px;
       opacity: 0.3;
     }
- 
+
     .detail-section {
       margin-bottom: 20px;
     }
- 
+
     .detail-section-title {
       font-size: 11px;
       font-weight: 500;
@@ -823,7 +820,7 @@ Reading notebook v2 1 · HTML
       padding-bottom: 6px;
       border-bottom: 1px solid var(--border2);
     }
- 
+
     .detail-excerpt {
       background: var(--bg);
       border-left: 3px solid var(--accent2);
@@ -831,13 +828,13 @@ Reading notebook v2 1 · HTML
       border-radius: 0 6px 6px 0;
       margin-bottom: 10px;
     }
- 
+
     .detail-excerpt-date {
       font-size: 10px;
       color: var(--ink3);
       margin-bottom: 4px;
     }
- 
+
     .detail-excerpt-text {
       font-family: 'Nanum Pen Script', cursive;
       font-size: 18px;
@@ -845,7 +842,7 @@ Reading notebook v2 1 · HTML
       color: var(--ink);
       white-space: pre-wrap;
     }
- 
+
     .detail-review {
       font-family: 'Nanum Pen Script', cursive;
       font-size: 18px;
@@ -853,14 +850,14 @@ Reading notebook v2 1 · HTML
       color: var(--ink);
       white-space: pre-wrap;
     }
- 
+
     /* Backup modal */
     .backup-tabs {
       display: flex;
       border-bottom: 1px solid var(--border2);
       margin-bottom: 20px;
     }
- 
+
     .backup-tab {
       padding: 10px 20px;
       font-size: 15px;
@@ -875,20 +872,20 @@ Reading notebook v2 1 · HTML
       font-family: 'Nanum Pen Script', cursive;
       transition: color 0.15s;
     }
- 
+
     .backup-tab.active {
       color: var(--accent);
       border-bottom-color: var(--accent);
     }
- 
+
     .backup-tab-content {
       display: none;
     }
- 
+
     .backup-tab-content.active {
       display: block;
     }
- 
+
     .backup-hint {
       font-size: 16px;
       color: var(--ink2);
@@ -896,7 +893,7 @@ Reading notebook v2 1 · HTML
       margin-bottom: 16px;
       font-family: 'Nanum Pen Script', cursive;
     }
- 
+
     .backup-code {
       background: var(--surface2);
       border: 1px solid var(--border);
@@ -911,7 +908,7 @@ Reading notebook v2 1 · HTML
       word-break: break-all;
       margin-bottom: 12px;
     }
- 
+
     .import-textarea {
       width: 100%;
       padding: 12px;
@@ -925,7 +922,7 @@ Reading notebook v2 1 · HTML
       color: var(--ink);
       margin-bottom: 12px;
     }
- 
+
     /* Notification */
     .toast {
       position: fixed;
@@ -943,19 +940,19 @@ Reading notebook v2 1 · HTML
       transition: all 0.3s;
       pointer-events: none;
     }
- 
+
     .toast.show {
       opacity: 1;
       transform: translateY(0);
     }
- 
+
     /* Section divider */
     .divider {
       border: none;
       border-top: 1px solid var(--border2);
       margin: 18px 0;
     }
- 
+
     /* 메인 탭 네비게이션 */
     .main-tab-nav { display: flex; background: var(--accent3); padding: 0 40px; gap: 4px; }
     .main-tab-btn { padding: 10px 20px; font-size: 15px; font-family: 'Nanum Pen Script', cursive; background: none; border: none; border-bottom: 2px solid transparent; color: rgba(200,169,110,0.55); cursor: pointer; transition: all 0.15s; letter-spacing: 0.5px; }
@@ -983,28 +980,28 @@ Reading notebook v2 1 · HTML
       #view-yearly { display: block !important; }
       .yearly-table tr:hover td { background: none; }
     }
- 
+
     @media (max-width: 600px) {
       .header {
         padding: 18px 18px;
       }
- 
+
       .container {
         padding: 20px 12px;
       }
- 
+
       .form-row {
         grid-template-columns: 1fr;
       }
- 
+
       .modal-body {
         padding: 18px;
       }
- 
+
       .stats-bar {
         gap: 10px;
       }
- 
+
       .stat-card {
         padding: 10px 14px;
       }
@@ -1012,9 +1009,9 @@ Reading notebook v2 1 · HTML
   </style>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.4/dist/umd/supabase.min.js"></script>
 </head>
- 
+
 <body>
- 
+
   <!-- Header -->
   <header class="header">
     <div style="display:flex; align-items:center; gap:20px;">
@@ -1029,16 +1026,16 @@ Reading notebook v2 1 · HTML
       <button class="btn btn-ghost" onclick="openBackup()">용량 관리</button>
     </div>
   </header>
- 
+
   <!-- 메인 탭 네비게이션 -->
   <nav class="main-tab-nav">
     <button class="main-tab-btn active" onclick="switchView('library')">📚 서재</button>
     <button class="main-tab-btn" onclick="switchView('yearly')">📅 연도별 독서기록</button>
   </nav>
- 
+
   <!-- 서재 뷰 -->
   <div class="view-panel active" id="view-library">
- 
+
   <!-- Stats band (full width, outside container) -->
   <div class="stats-band">
     <div class="stat-card">
@@ -1062,13 +1059,13 @@ Reading notebook v2 1 · HTML
       <div class="stat-label">평균 별점</div>
     </div>
   </div>
- 
+
   <!-- Filter section (full width, outside container) -->
   <div class="filter-section">
     <div class="filter-section-label">🔍 검색 &amp; 필터</div>
     <div class="filter-bar">
       <input type="text" id="search-input" placeholder="책 제목 / 저자 검색..." oninput="renderBooks()">
- 
+
       <div class="custom-select-wrap" id="wrap-genre">
         <button class="custom-select-btn" id="btn-genre" onclick="toggleDrop('genre')">전체 장르</button>
         <div class="custom-select-dropdown" id="drop-genre">
@@ -1082,7 +1079,7 @@ Reading notebook v2 1 · HTML
           <div class="custom-select-option" data-val="기타" onclick="pickDrop('genre','기타','기타')">기타</div>
         </div>
       </div>
- 
+
       <div class="custom-select-wrap" id="wrap-type">
         <button class="custom-select-btn" id="btn-type" onclick="toggleDrop('type')">전체 유형</button>
         <div class="custom-select-dropdown" id="drop-type">
@@ -1091,7 +1088,7 @@ Reading notebook v2 1 · HTML
           <div class="custom-select-option" data-val="e-book" onclick="pickDrop('type','e-book','e-book')">e-book</div>
         </div>
       </div>
- 
+
       <div class="custom-select-wrap" id="wrap-status">
         <button class="custom-select-btn" id="btn-status" onclick="toggleDrop('status')">전체 상태</button>
         <div class="custom-select-dropdown" id="drop-status">
@@ -1100,7 +1097,7 @@ Reading notebook v2 1 · HTML
           <div class="custom-select-option" data-val="done" onclick="pickDrop('status','done','완독')">완독</div>
         </div>
       </div>
- 
+
       <div class="custom-select-wrap" id="wrap-sort">
         <button class="custom-select-btn" id="btn-sort" onclick="toggleDrop('sort')">최근 추가순</button>
         <div class="custom-select-dropdown" id="drop-sort">
@@ -1113,20 +1110,20 @@ Reading notebook v2 1 · HTML
       </div>
     </div>
   </div>
- 
+
   <!-- Main -->
   <div class="container">
     <!-- Book Grid -->
     <div class="book-grid" id="book-grid"></div>
   </div>
- 
+
   </div><!-- /view-library -->
- 
+
   <!-- 연도별 독서 뷰 -->
   <div class="view-panel" id="view-yearly">
     <div class="yearly-wrap" id="yearly-wrap"></div>
   </div>
- 
+
   <!-- Add/Edit Modal -->
   <div class="modal-overlay" id="add-modal">
     <div class="modal">
@@ -1135,7 +1132,7 @@ Reading notebook v2 1 · HTML
         <button class="modal-close" onclick="closeAddModal()">✕</button>
       </div>
       <div class="modal-body">
- 
+
         <!-- Cover upload -->
         <div class="form-row">
           <div class="form-group">
@@ -1171,7 +1168,7 @@ Reading notebook v2 1 · HTML
             </div>
           </div>
         </div>
- 
+
         <div class="form-row">
           <div class="form-group">
             <label class="form-label">도서 분류</label>
@@ -1192,7 +1189,7 @@ Reading notebook v2 1 · HTML
             </select>
           </div>
         </div>
- 
+
         <div class="form-row">
           <div class="form-group">
             <label class="form-label">읽기 시작한 날</label>
@@ -1203,9 +1200,9 @@ Reading notebook v2 1 · HTML
             <input type="date" class="form-input" id="inp-end">
           </div>
         </div>
- 
+
         <hr class="divider">
- 
+
         <!-- Excerpts -->
         <div class="excerpt-section">
           <div class="excerpt-header">
@@ -1229,13 +1226,13 @@ Reading notebook v2 1 · HTML
             </div>
           </div>
         </div>
- 
+
         <!-- Review -->
         <div class="form-group" style="margin-bottom:0">
           <label class="form-label">총평</label>
           <textarea class="form-textarea tall" id="inp-review" placeholder="이 책에 대한 나의 총평을 자유롭게 적어보세요..."></textarea>
         </div>
- 
+
       </div>
       <div class="modal-footer">
         <button class="btn btn-ghost" onclick="closeAddModal()">취소</button>
@@ -1243,7 +1240,7 @@ Reading notebook v2 1 · HTML
       </div>
     </div>
   </div>
- 
+
   <!-- Detail Modal -->
   <div class="modal-overlay" id="detail-modal">
     <div class="modal">
@@ -1259,7 +1256,7 @@ Reading notebook v2 1 · HTML
       </div>
     </div>
   </div>
- 
+
   <!-- Backup Modal -->
   <div class="modal-overlay" id="backup-modal">
     <div class="modal">
@@ -1306,17 +1303,17 @@ Reading notebook v2 1 · HTML
       </div>
     </div>
   </div>
- 
+
   <!-- Toast -->
   <div class="toast" id="toast"></div>
- 
+
   <script>
     // ── Data ──────────────────────────────────────────────────
     // ── Supabase init ─────────────────────────────────────────
     const SUPABASE_URL = 'https://wbobttwrzpzvmjvqjwqd.supabase.co';
     const SUPABASE_KEY = 'sb_publishable_iD7sOcNwtZaaF5nOkVlflw_S0HlpOm_';
     const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
- 
+
     const STORAGE_KEY = 'reading_notebook_v1'; // localStorage fallback용
     let books = [];
     let editingId = null;
@@ -1324,7 +1321,7 @@ Reading notebook v2 1 · HTML
     let currentRating = 0;
     let currentExcerpts = [];
     let currentCover = null;
- 
+
     // DB row <-> app object 변환
     function rowToBook(r) {
       return {
@@ -1358,7 +1355,7 @@ Reading notebook v2 1 · HTML
         updated_at: b.updatedAt,
       };
     }
- 
+
     async function load() {
       const { data, error } = await sb.from('books').select('*').order('updated_at', { ascending: false });
       if (error) { showToast('데이터 로드 실패: ' + error.message); books = []; return; }
@@ -1366,7 +1363,7 @@ Reading notebook v2 1 · HTML
     }
     async function save() { /* 개별 upsert로 처리 — 이 함수는 하위호환용 */ }
     function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2); }
- 
+
     // ── Stats ─────────────────────────────────────────────────
     function updateStats() {
       const done = books.filter(b => b.endDate);
@@ -1380,10 +1377,10 @@ Reading notebook v2 1 · HTML
       document.getElementById('stat-excerpts').textContent = excerpts;
       document.getElementById('stat-avg').textContent = avg === '-' ? '-' : avg + '★';
     }
- 
+
     // ── Render ────────────────────────────────────────────────
     const dropVals = { genre: '', type: '', status: '', sort: 'newest' };
- 
+
     function toggleDrop(id) {
       const drop = document.getElementById('drop-' + id);
       const btn = document.getElementById('btn-' + id);
@@ -1408,7 +1405,7 @@ Reading notebook v2 1 · HTML
         document.querySelectorAll('.custom-select-btn').forEach(b => b.classList.remove('open'));
       }
     });
- 
+
     function getFiltered() {
       const q = (document.getElementById('search-input').value || '').toLowerCase();
       const genre = dropVals.genre;
@@ -1431,13 +1428,13 @@ Reading notebook v2 1 · HTML
       });
       return list;
     }
- 
+
     function starsHtml(r, size = 14) {
       return Array.from({ length: 5 }, (_, i) =>
         `<span class="star${i < r ? ' filled' : ''}" style="font-size:${size}px">★</span>`
       ).join('');
     }
- 
+
     function renderBooks() {
       updateStats();
       const grid = document.getElementById('book-grid');
@@ -1470,9 +1467,9 @@ Reading notebook v2 1 · HTML
     </div>`;
       }).join('');
     }
- 
+
     function escHtml(s) { return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
- 
+
     // ── Add/Edit Modal ────────────────────────────────────────
     function openAddModal() {
       editingId = null;
@@ -1484,7 +1481,7 @@ Reading notebook v2 1 · HTML
       document.getElementById('add-modal').classList.add('open');
     }
     function closeAddModal() { document.getElementById('add-modal').classList.remove('open'); }
- 
+
     function clearForm() {
       ['inp-title', 'inp-author', 'inp-start', 'inp-end', 'inp-review', 'excerpt-text', 'excerpt-date']
         .forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
@@ -1495,7 +1492,7 @@ Reading notebook v2 1 · HTML
       renderCoverPreview();
       renderExcerptsList();
     }
- 
+
     function handleCoverUpload(e) {
       const file = e.target.files[0];
       if (!file) return;
@@ -1526,14 +1523,14 @@ Reading notebook v2 1 · HTML
       if (currentCover) { img.src = currentCover; img.style.display = 'block'; txt.style.display = 'none'; }
       else { img.style.display = 'none'; txt.style.display = 'block'; }
     }
- 
+
     function setRating(v) {
       currentRating = v;
       document.querySelectorAll('.star-btn').forEach((btn, i) => {
         btn.classList.toggle('active', i < v);
       });
     }
- 
+
     function addExcerpt() {
       const text = document.getElementById('excerpt-text').value.trim();
       const date = document.getElementById('excerpt-date').value;
@@ -1562,7 +1559,7 @@ Reading notebook v2 1 · HTML
     </div>
   `).join('');
     }
- 
+
     function startExcerptEdit(id) {
       const textEl = document.getElementById('et-' + id);
       const orig = currentExcerpts.find(e => e.id === id).text;
@@ -1571,7 +1568,7 @@ Reading notebook v2 1 · HTML
       document.getElementById('ecancel-' + id).style.display = '';
       document.getElementById('eedit-' + id).style.display = 'none';
     }
- 
+
     function saveExcerptEdit(id) {
       const val = document.getElementById('ea-' + id).value.trim();
       if (!val) { showToast('내용을 입력하세요'); return; }
@@ -1579,11 +1576,11 @@ Reading notebook v2 1 · HTML
       currentExcerpts[idx].text = val;
       renderExcerptsList();
     }
- 
+
     function cancelExcerptEdit(id) {
       renderExcerptsList();
     }
- 
+
     function saveBook() {
       const title = document.getElementById('inp-title').value.trim();
       if (!title) { showToast('제목을 입력하세요'); return; }
@@ -1615,7 +1612,7 @@ Reading notebook v2 1 · HTML
       closeAddModal();
       showToast(editingId ? '수정되었습니다' : '책이 추가되었습니다');
     }
- 
+
     // ── Detail Modal ──────────────────────────────────────────
     function openDetail(id) {
       currentDetailId = id;
@@ -1661,7 +1658,7 @@ Reading notebook v2 1 · HTML
       document.getElementById('detail-modal').classList.add('open');
     }
     function closeDetail() { document.getElementById('detail-modal').classList.remove('open'); }
- 
+
     function editCurrentBook() {
       const b = books.find(x => x.id === currentDetailId);
       if (!b) return;
@@ -1683,7 +1680,7 @@ Reading notebook v2 1 · HTML
       renderExcerptsList();
       document.getElementById('add-modal').classList.add('open');
     }
- 
+
     function deleteCurrentBook() {
       if (!confirm('이 책을 삭제하시겠습니까?')) return;
       const id = currentDetailId;
@@ -1695,7 +1692,7 @@ Reading notebook v2 1 · HTML
       closeDetail();
       showToast('삭제되었습니다');
     }
- 
+
     // ── Backup ────────────────────────────────────────────────
     function openBackup() {
       document.getElementById('json-file-name').textContent = '';
@@ -1705,7 +1702,7 @@ Reading notebook v2 1 · HTML
       setTimeout(initDropZone, 50);
     }
     function closeBackup() { document.getElementById('backup-modal').classList.remove('open'); }
- 
+
     function switchTab(name) {
       document.querySelectorAll('.backup-tab').forEach((t, i) => {
         const names = ['export', 'import'];
@@ -1714,7 +1711,7 @@ Reading notebook v2 1 · HTML
       document.querySelectorAll('.backup-tab-content').forEach(c => c.classList.remove('active'));
       document.getElementById('tab-' + name).classList.add('active');
     }
- 
+
     function downloadBackup() {
       const blob = new Blob([JSON.stringify(books, null, 2)], { type: 'application/json' });
       const url = URL.createObjectURL(blob);
@@ -1725,23 +1722,23 @@ Reading notebook v2 1 · HTML
       URL.revokeObjectURL(url);
       showToast('백업 파일이 다운로드됩니다');
     }
- 
+
     function importData() { /* 파일 선택으로만 복원 */ }
- 
+
     function loadJsonFile(e) {
       const file = e.target.files[0];
       if (!file) return;
       readJsonFile(file);
       e.target.value = '';
     }
- 
+
     function readJsonFile(file) {
       document.getElementById('json-file-name').textContent = '📄 ' + file.name;
       const reader = new FileReader();
       reader.onload = ev => applyImport(ev.target.result.trim());
       reader.readAsText(file, 'UTF-8');
     }
- 
+
     function initDropZone() {
       const zone = document.getElementById('drop-zone');
       if (!zone) return;
@@ -1767,7 +1764,7 @@ Reading notebook v2 1 · HTML
         document.getElementById('json-file-input').click();
       });
     }
- 
+
     async function applyImport(raw) {
       try {
         const parsed = JSON.parse(raw);
@@ -1783,31 +1780,31 @@ Reading notebook v2 1 · HTML
         showToast(`${parsed.length}권 업로드 완료`);
       } catch (e) { showToast('올바른 JSON 파일 형식이 아닙니다'); }
     }
- 
+
     // 용량 계산 및 UI 업데이트
     function updateStorageUI() {
       const raw = localStorage.getItem(STORAGE_KEY) || '';
       const usedBytes = new Blob([raw]).size;
       const maxBytes = 5 * 1024 * 1024; // 5MB
       const pct = Math.min((usedBytes / maxBytes) * 100, 100);
- 
+
       const toKB = b => (b / 1024).toFixed(1);
       const toMB = b => (b / 1024 / 1024).toFixed(2);
- 
+
       // 게이지 바 색상: 80% 이상이면 경고
       const bar = document.getElementById('storage-bar');
       bar.style.width = pct.toFixed(1) + '%';
       bar.style.background = pct >= 80 ? 'var(--red)' : pct >= 60 ? '#c8a030' : 'var(--accent)';
- 
+
       document.getElementById('storage-detail').textContent =
         `${toMB(usedBytes)} MB / 5.00 MB (${pct.toFixed(1)}%)`;
- 
+
       // 책별 상세
       const withCover = books.filter(b => b.cover).length;
       document.getElementById('storage-books-info').textContent =
         `총 ${books.length}권 · 표지 이미지 ${withCover}권 포함`;
     }
- 
+
     // ── 뷰 전환 ───────────────────────────────────────────────
     function switchView(view) {
       document.querySelectorAll('.main-tab-btn').forEach((btn, i) => {
@@ -1817,7 +1814,7 @@ Reading notebook v2 1 · HTML
       document.getElementById('view-' + view).classList.add('active');
       if (view === 'yearly') renderYearly();
     }
- 
+
     // ── 연도별 독서 렌더 ──────────────────────────────────────
     function renderYearly() {
       const wrap = document.getElementById('yearly-wrap');
@@ -1866,9 +1863,9 @@ Reading notebook v2 1 · HTML
             </div>`;
         }).join('');
     }
- 
+
     function printYearly() { window.print(); }
- 
+
     // ── Utils ─────────────────────────────────────────────────
     function formatDate(d) {
       return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
@@ -1879,7 +1876,7 @@ Reading notebook v2 1 · HTML
       t.classList.add('show');
       setTimeout(() => t.classList.remove('show'), 2500);
     }
- 
+
     // Close modals on overlay click
     document.querySelectorAll('.modal-overlay').forEach(overlay => {
       overlay.addEventListener('click', e => {
@@ -1888,10 +1885,10 @@ Reading notebook v2 1 · HTML
         }
       });
     });
- 
+
     // Today default for excerpt date
     document.getElementById('excerpt-date').value = formatDate(new Date());
- 
+
     // Init
     async function init() {
       showToast('데이터 불러오는 중...');
@@ -1901,7 +1898,5 @@ Reading notebook v2 1 · HTML
     init();
   </script>
 </body>
- 
+
 </html>
-
-
